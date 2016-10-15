@@ -101,6 +101,14 @@ uint8_t u8g_dev_ks0108_192x64_fn(u8g_t *u8g, u8g_dev_t *dev, uint8_t msg, void *
         u8g_SetAddress(u8g, dev, 1);           /* data mode */
         u8g_WriteSequence(u8g, dev, 64, 64+(uint8_t *)pb->buf);
         u8g_SetChipSelect(u8g, dev, 0);
+		
+ 		//u8g_SetAddress(u8g, dev, 0);           /* command mode */
+        //u8g_SetChipSelect(u8g, dev, 3);
+        //u8g_WriteByte(u8g, dev, 0x0b8 | pb->p.page); /* select current page (KS0108b) */
+        //u8g_WriteByte(u8g, dev, 0x040 );		/* set address 0 */
+        //u8g_SetAddress(u8g, dev, 1);           /* data mode */
+        //u8g_WriteSequence(u8g, dev, 64, 128+(uint8_t *)pb->buf);
+        //u8g_SetChipSelect(u8g, dev, 0); 
         
       }
       break;
