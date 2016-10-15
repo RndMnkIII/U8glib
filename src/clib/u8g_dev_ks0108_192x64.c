@@ -62,6 +62,10 @@ static const uint8_t u8g_dev_ks0108_192x64_init_seq[] PROGMEM = {
   0x03f,		                /* display on */
   0x0c0,		                /* start at line 0 */
   U8G_ESC_DLY(20),         /* delay 20 ms */
+  U8G_ESC_CS(3),             /* enable chip 3 */
+  0x03f,		                /* display on */
+  0x0c0,		                /* start at line 0 */
+  U8G_ESC_DLY(20),         /* delay 20 ms */
   U8G_ESC_CS(0),             /* disable all chips */
   U8G_ESC_END                /* end of sequence */
 };
