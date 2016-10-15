@@ -65,9 +65,6 @@
 
 
 
-
-
-
 void u8g_com_arduino_parallel_write(u8g_t *u8g, uint8_t val)
 {
   u8g_com_arduino_digital_write(u8g, U8G_PI_D0, val&1);

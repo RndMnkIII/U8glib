@@ -98,7 +98,6 @@ static uint8_t u8g_data_mask[8];
 #endif
 
 
-
 static void u8g_com_arduino_fast_parallel_init(u8g_t *u8g)
 {
   u8g_data_port[0] =  portOutputRegister(digitalPinToPort(u8g->pin_list[U8G_PI_D0]));

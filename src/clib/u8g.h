@@ -830,10 +830,12 @@ defined(__18CXX) || defined(__PIC32MX)
 /* ==== Parallel interface, Arduino ====*/
 #if defined(ARDUINO)
 #if defined(__AVR__)
+#warning *** Utilizando AVR u8g_com_arduino_..._fn para U8G_COM_PARALLEL, U8G_COM_FAST_PARALLEL ***
 #define U8G_COM_PARALLEL u8g_com_arduino_parallel_fn
 #define U8G_COM_FAST_PARALLEL u8g_com_arduino_fast_parallel_fn
 #define U8G_COM_T6963  u8g_com_arduino_t6963_fn
 #else /* Arduino Due, Chipkit PIC32 */
+#warning *** Utilizando DUE,PIC32 u8g_com_arduino_..._fn para U8G_COM_PARALLEL, U8G_COM_FAST_PARALLEL ***
 #define U8G_COM_PARALLEL u8g_com_arduino_parallel_fn
 #define U8G_COM_FAST_PARALLEL u8g_com_arduino_parallel_fn
 #define U8G_COM_T6963  u8g_com_null_fn
@@ -841,12 +843,14 @@ defined(__18CXX) || defined(__PIC32MX)
 #endif
 #ifndef U8G_COM_PARALLEL
 #if defined(__AVR__)
+#warning *** Utilizando ATMEGA u8g_com_atmega_parallel_fn para U8G_COM_PARALLEL, U8G_COM_FAST_PARALLEL ***
 #define U8G_COM_PARALLEL u8g_com_atmega_parallel_fn
 #define U8G_COM_FAST_PARALLEL u8g_com_atmega_parallel_fn
 #define U8G_COM_T6963  u8g_com_null_fn
 #endif
 #endif
 #ifndef U8G_COM_PARALLEL
+#warning *** Utilizando u8g_com_null_fn para U8G_COM_PARALLEL, U8G_COM_FAST_PARALLEL ***
 #define U8G_COM_PARALLEL u8g_com_null_fn
 #define U8G_COM_FAST_PARALLEL u8g_com_null_fn
 #define U8G_COM_T6963  u8g_com_null_fn
@@ -1120,11 +1124,13 @@ typedef void (*u8g_state_cb)(uint8_t msg);
 #define U8G_PI_D6 11
 #define U8G_PI_D7 12
 
-/* read/write pin, must be the last pin in the list, this means U8G_PIN_LIST_LEN =  U8G_PI_RW + 1*/
-#define U8G_PI_WR 13
-#define U8G_PI_RW 13 
+#define U8G_PI_CS3 13
 
-#define U8G_PIN_LIST_LEN 14
+/* read/write pin, must be the last pin in the list, this means U8G_PIN_LIST_LEN =  U8G_PI_RW + 1*/
+#define U8G_PI_WR 14
+#define U8G_PI_RW 14 
+
+#define U8G_PIN_LIST_LEN 15
 
 
 #define U8G_PIN_DUMMY 254
