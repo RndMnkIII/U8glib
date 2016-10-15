@@ -400,6 +400,10 @@ extern u8g_dev_t u8g_dev_uc1610_dogxl160_2x_gr_hw_spi;
 extern u8g_dev_t u8g_dev_ks0108_128x64;         /* official Arduino Library interface */
 extern u8g_dev_t u8g_dev_ks0108_128x64_fast;    /* faster, but uses private tables from the Arduino Library */
 
+/* Display: BuyDisplay.com KS0108, Size: 192x64 monochrom */
+extern u8g_dev_t u8g_dev_ks0108_192x64;         /* official Arduino Library interface */
+extern u8g_dev_t u8g_dev_ks0108_192x64_fast;    /* faster, but uses private tables from the Arduino Library */
+
 /* Nokia 84x48 Display with PCD8544 */
 extern u8g_dev_t u8g_dev_pcd8544_84x48_sw_spi;
 extern u8g_dev_t u8g_dev_pcd8544_84x48_hw_spi;
