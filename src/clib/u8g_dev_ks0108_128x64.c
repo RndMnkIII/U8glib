@@ -83,7 +83,7 @@ uint8_t u8g_dev_ks0108_128x64_fn(u8g_t *u8g, u8g_dev_t *dev, uint8_t msg, void *
         u8g_pb_t *pb = (u8g_pb_t *)(dev->dev_mem);
         
         u8g_SetAddress(u8g, dev, 0);           /* command mode */
-        u8g_SetChipSelect(u8g, dev, 2);
+        u8g_SetChipSelect(u8g, dev, 1);
         u8g_WriteByte(u8g, dev, 0x0b8 | pb->p.page); /* select current page (KS0108b) */
         u8g_WriteByte(u8g, dev, 0x040 );		/* set address 0 */
         u8g_SetAddress(u8g, dev, 1);           /* data mode */
@@ -91,7 +91,7 @@ uint8_t u8g_dev_ks0108_128x64_fn(u8g_t *u8g, u8g_dev_t *dev, uint8_t msg, void *
         u8g_SetChipSelect(u8g, dev, 0);
         
         u8g_SetAddress(u8g, dev, 0);           /* command mode */
-        u8g_SetChipSelect(u8g, dev, 1);
+        u8g_SetChipSelect(u8g, dev, 2);
         u8g_WriteByte(u8g, dev, 0x0b8 | pb->p.page); /* select current page (KS0108b) */
         u8g_WriteByte(u8g, dev, 0x040 );		/* set address 0 */
         u8g_SetAddress(u8g, dev, 1);           /* data mode */
