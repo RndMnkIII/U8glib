@@ -1,6 +1,6 @@
 /*
 
-  u8g_dev_ks0108_128x64.c
+  u8g_dev_ks0108_192x64.c
 
   Universal 8bit Graphics Library
   
@@ -46,7 +46,7 @@
 
 #include "u8g.h"
 
-#define WIDTH 128
+#define WIDTH 192
 #define HEIGHT 64
 #define PAGE_HEIGHT 8
 
