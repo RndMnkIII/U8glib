@@ -90,7 +90,7 @@ void u8g_com_arduino_parallel_write(u8g_t *u8g, uint8_t val)
   u8g_10MicroDelay(); /* ST7920 commands: 72us */
 }
 
-
+//this version support CS3 Chip select
 uint8_t u8g_com_arduino_parallel_fn(u8g_t *u8g, uint8_t msg, uint8_t arg_val, void *arg_ptr)
 {
   switch(msg)
