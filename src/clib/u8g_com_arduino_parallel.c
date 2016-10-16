@@ -113,24 +113,35 @@ uint8_t u8g_com_arduino_parallel_fn(u8g_t *u8g, uint8_t msg, uint8_t arg_val, vo
         /* disable */
         u8g_com_arduino_digital_write(u8g, U8G_PI_CS1, HIGH);
         u8g_com_arduino_digital_write(u8g, U8G_PI_CS2, HIGH);
+		u8g_com_arduino_digital_write(u8g, U8G_PI_CS3, HIGH);
       }
       else if ( arg_val == 1 )
       {
         /* enable */
         u8g_com_arduino_digital_write(u8g, U8G_PI_CS1, LOW);
         u8g_com_arduino_digital_write(u8g, U8G_PI_CS2, HIGH);
+		u8g_com_arduino_digital_write(u8g, U8G_PI_CS3, HIGH);
       }
       else if ( arg_val == 2 )
       {
         /* enable */
         u8g_com_arduino_digital_write(u8g, U8G_PI_CS1, HIGH);
         u8g_com_arduino_digital_write(u8g, U8G_PI_CS2, LOW);
+		u8g_com_arduino_digital_write(u8g, U8G_PI_CS3, HIGH);
+      }
+	  else if ( arg_val == 3 )
+      {
+        /* enable */
+        u8g_com_arduino_digital_write(u8g, U8G_PI_CS1, HIGH);
+        u8g_com_arduino_digital_write(u8g, U8G_PI_CS2, HIGH);
+		u8g_com_arduino_digital_write(u8g, U8G_PI_CS3, LOW);
       }
       else
       {
         /* enable */
         u8g_com_arduino_digital_write(u8g, U8G_PI_CS1, LOW);
         u8g_com_arduino_digital_write(u8g, U8G_PI_CS2, LOW);
+		u8g_com_arduino_digital_write(u8g, U8G_PI_CS3, LOW);
       }
       break;
     case U8G_COM_MSG_WRITE_BYTE:

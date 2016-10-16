@@ -58,10 +58,17 @@ uint8_t U8GLIB::initI2C(u8g_dev_t *dev, uint8_t options)
 }
 
 uint8_t U8GLIB::init8Bit(u8g_dev_t *dev, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, 
+    uint8_t en, uint8_t cs1, uint8_t cs2, uint8_t di, uint8_t rw, uint8_t reset)
+{
+  prepare();
+  return u8g_Init8Bit(&u8g, dev, d0, d1, d2, d3, d4, d5, d6, d7, en, cs1, cs2, di, rw, reset); 
+}
+
+uint8_t U8GLIB::init8Bit2(u8g_dev_t *dev, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7, 
     uint8_t en, uint8_t cs1, uint8_t cs2, uint8_t cs3, uint8_t di, uint8_t rw, uint8_t reset)
 {
   prepare();
-  return u8g_Init8Bit(&u8g, dev, d0, d1, d2, d3, d4, d5, d6, d7, en, cs1, cs2, cs3, di, rw, reset); 
+  return u8g_Init8Bit2(&u8g, dev, d0, d1, d2, d3, d4, d5, d6, d7, en, cs1, cs2, cs3, di, rw, reset); 
 }
 
 uint8_t U8GLIB::init8BitFixedPort(u8g_dev_t *dev, uint8_t en, uint8_t cs, uint8_t di, uint8_t rw, uint8_t reset)
